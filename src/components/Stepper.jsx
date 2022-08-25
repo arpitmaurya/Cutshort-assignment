@@ -36,6 +36,7 @@ function Stepper({ steps, currentStep }) {
       let obj = { completed: false, selected: index === 0 ? true : false };
       return obj;
     });
+   
     stepRef.current = stepsState;
     const current = updateStep(currentStep - 1, stepRef.current);
 

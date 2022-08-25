@@ -15,25 +15,25 @@ function Planning() {
       </section>
       <form className='space-y-4'>
         <div className='form-control flex justify-between space-x-7'>
-          <div className='border p-4 h-36 rounded  w-full cursor-pointer border-[#664de5]'>
+          <div className='border p-4 h-36 rounded overflow-hidden  w-full cursor-pointer border-[#664de5]'>
             <div className='w-full '>
               <IoPerson className='text-xl text-[#664de5]' />
             </div>
             <h2 className='mt-2 font-bold text-sm text-[#474f5f]'>
               For myself
             </h2>
-            <p className='mt-2 text-left text-sm font-medium text-[#8c95a8]'>
+            <p className='mt-2 h-full w-full overflow-auto text-left text-sm font-medium text-[#8c95a8]'>
               Write Better. Think more clearly.Stay organized.
             </p>
           </div>
-          <div className='border p-4 h-36 rounded  w-full cursor-pointer hover:border-[#664de5]'>
+          <div className='border p-4 h-36 rounded overflow-hidden  w-full cursor-pointer hover:border-[#664de5]'>
             <div className='w-full '>
               <RiTeamFill className='text-xl ' />
             </div>
             <h2 className='mt-2 font-bold text-sm text-[#474f5f]'>
               With my team
             </h2>
-            <p className='mt-2 text-left text-sm font-medium text-[#8c95a8]'>
+            <p className='mt-2   text-left text-sm overflow-auto font-medium text-[#8c95a8]'>
               Wikis,docs,task & projects,all in one place.
             </p>
           </div>
