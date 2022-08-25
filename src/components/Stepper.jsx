@@ -23,7 +23,6 @@ function Stepper({ steps, currentStep }) {
       } else {
         newSteps[count] = {
           ...newSteps[count],
-
           selected: false,
           completed: false,
         };
@@ -34,7 +33,7 @@ function Stepper({ steps, currentStep }) {
   };
   useEffect(() => {
     const stepsState = steps.map((_, index) => {
-      let obj = {completed: false,selected: index === 0 ? true : false,};
+      let obj = { completed: false, selected: index === 0 ? true : false };
       return obj;
     });
     stepRef.current = stepsState;
@@ -56,7 +55,7 @@ function Stepper({ steps, currentStep }) {
         >
           <div className='relative flex flex-col items-center text-teal-600'>
             <div
-              className={`rounded-full transition duration-500 ease-in-out border-2 border-gray-300 h-9 w-9 flex items-center justify-center py-3 ${
+              className={`rounded-full transition duration-400 ease-in-out border-2 border-gray-300 h-9 w-9 flex items-center justify-center py-3 ${
                 step.completed ? 'bg-[#664de5] text-white border-[#664de5]' : ''
               }`}
             >
@@ -65,16 +64,12 @@ function Stepper({ steps, currentStep }) {
             </div>
           </div>
           <div
-            className={`flex-auto w-full  transition duration-500 ease-in-out bg-gray-400 h-[1.6px] `}
+            className={`flex-auto w-full  transition duration-400 ease-in-out bg-gray-400 h-[1.6px] `}
           >
             {console.log(step)}
             <div
               className={`h-full  bg-[#664de5] ${
-                step.selected
-                  ? `w-2/4`
-                  : step.completed
-                  ? 'w-full'
-                  : 'w-0'
+                step.selected ? `w-2/4` : step.completed ? 'w-full' : 'w-0'
               }`}
             ></div>
             {/* Display Line */}

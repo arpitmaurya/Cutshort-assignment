@@ -6,6 +6,7 @@ import Setup from './components/steps/Setup';
 import Planning from './components/steps/Planning';
 import Congratulations from './components/steps/Congratulations';
 import { useState } from 'react';
+import Logo from './components/Logo';
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
   const steps = ['Welcome', 'Setup', 'Planning', 'Congratulations'];
@@ -31,9 +32,10 @@ function App() {
   };
   return (
     <div className='App h-full font-Inter  flex justify-center items-center w-full min-h-screen'>
-      <div className='max-w-md border pb-40 pt-10 mx-auto p-7 rounded-xl w-full'>
+      <div className='max-w-md  pt-10 mx-auto p-7 rounded-xl w-full'>
         <div className='p-3 space-y-10'>
           {/* Stepper */}
+          <Logo/>
           <div className='container horizontal mt-5'>
             <Stepper steps={steps} currentStep={currentStep} />
           </div>
